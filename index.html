@@ -5,46 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
     <title>Document</title>
-    <style>
-        .conatiner{
-            height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        #color{
-            color: gray;
-            font-size: 50px;
-            margin-top: 200px;
-            text-align: center;
-            border: 2px solid white;
-            background-color: aliceblue;
-            border-radius: 30px;
-            letter-spacing: 10px;
-        }
-        .text{
-            color: black;
-            font-size: 50px;
-            text-align: center;
-            letter-spacing: 10px;
-        }
-        .button{
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-top: 50px;
-            background-color: transparent;
-            border-radius: 30px;
-        } 
-        button{
-            color: white;
-            background-color: black;
-            border: 2px solid black;
-            padding: 20px;
-            font-size: 20px;
-            border-radius: 35px;
-        }  
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
@@ -55,19 +16,6 @@
 <div class="button">
     <button onclick="changeColor()">Generate Color</button>
 </div>
-    <script>
-        function changeColor(){
-            function generateRandomHexNumber() {
-         var randomHex = Math.floor(Math.random() * 16777215).toString(16);
-        return "#" + randomHex;
-        }
-        var code = generateRandomHexNumber();
-        var elem = document.documentElement;
-        elem.style.backgroundColor = code;
-        var text = document.getElementById("color");
-        text.textContent = code;
-        }
-        window.onload = updateColor();
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
